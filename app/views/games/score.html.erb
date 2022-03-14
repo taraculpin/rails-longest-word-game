@@ -1,2 +1,13 @@
-<h1>Games#score</h1>
-<p>Find me in app/views/games/score.html.erb</p>
+<h1>Your score</h1>
+
+<% if @included %>
+  <% if @english_word %>
+    <p>Your score is <%= @word.length %></p>
+  <% else %>
+    <p><%= @word %> is not a word</p>
+    <p>Your score is 0</p>
+  <% end %>
+<% else %>
+  <p>This word can't be made from the grid</p>
+  <p>Your score is 0</p>
+<% end %>
