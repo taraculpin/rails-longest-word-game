@@ -3,6 +3,7 @@
 <% if @included %>
   <% if @english_word %>
     <p>Your score is <%= @word.length %></p>
+      <% session[:score] += @word.length %>
   <% else %>
     <p><%= @word %> is not a word</p>
     <p>Your score is 0</p>
@@ -11,3 +12,7 @@
   <p>This word can't be made from the grid</p>
   <p>Your score is 0</p>
 <% end %>
+
+Running score = <%= session[:score] %>
+
+<%= link_to "Play again", new_path %>
