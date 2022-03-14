@@ -14,6 +14,10 @@ class GamesController < ApplicationController
     @word = params[:word].upcase
     @included = included?(@word, @letters)
     @english_word = english_word?(@word)
+    if session[:score].nil?
+      session[:score] = 0
+    end
+
   end
 
   private
