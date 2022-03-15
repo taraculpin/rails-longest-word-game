@@ -1,9 +1,11 @@
 <h1>New game</h1>
 
 <div class="grid">
-  <% @letters.each do |letter| %>
-  <p><%=letter%></p>
-  <%end%>
+  <ul>
+    <% @letters.each do |letter| %>
+    <li><%=letter%></li>
+    <%end%>
+  </ul>
 </div>
 
 <div>

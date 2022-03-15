@@ -5,10 +5,12 @@
 h1 {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-.grid {
+.grid ul {
   display: flex;
+  flex-direction: row;
+  list-style: none;
 }
-.grid p {
+.grid li {
   background-color: rgb(52,152,219);
   color: white;
   font-family: 'Courier New', Courier, monospace;
